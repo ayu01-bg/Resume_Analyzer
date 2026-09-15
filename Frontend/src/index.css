@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: Poppins_semiBold, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: 'Poppins_semiBold';
+    src: url(./assets/Fonts/Poppins/Poppins-SemiBold.ttf);
+}
+

@@ -3,7 +3,7 @@ const multer = require('multer')
 // const uploadFile = require('./services/storage.service')
 const postModel = require('./model/post.model')
 const pdfParse = require('pdf-parse')
-const connectingAi = require('./api/api')
+const connectingAi = require('./api/geminiApi')
 
 
 const app = express()
@@ -23,16 +23,15 @@ app.post("/postResume", upload.single("resume"), async (req, res) => {
 
         const resumeText = pdfData.text
 
-        console.log("data of pdf text is", resumeText);
+        // console.log("data of pdf text is", resumeText);
 
-        const result = await connectingAi(pdfData.text)
+        const result = await connectingAi(resumeText)
         console.log("Result showd here", result);
 
 
         res.status(201).json({
             message: "PDF read Successfully"
         });
-
 
         // console.log("After upload");
 
@@ -65,6 +64,5 @@ app.get("/getResume", async (req, res) => {
     })
 
 })
-
 
 module.exports = app  

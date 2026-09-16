@@ -46,7 +46,7 @@ const ContentData = ({ children }) => {
             textColor: 'text-blue-400/80',
             bgColor:'bg-blue-300/20'
         },
-        {
+        {   
             id: '2',
             icon: Search,
             title: 'AI Analysis',

@@ -1,9 +1,6 @@
 import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
-import SliderSection from './sliderSection'
-import ProcessGuide from './processGuide'
-import InsightsAnalyzer from './insightsAnalyzer'
-import { AppContext } from '../../Contents/contentData'
+import { AppContext } from '../../../Contents/contentData'
 import {
     CheckCircle2,
     CircleCheck,
@@ -12,10 +9,8 @@ import {
     Play,
     StarIcon
 } from 'lucide-react'
-import WhyAnalyzer from './whyAnalyzer'
-import AnalyzeResume from './analyzeResume'
 
-const LandingPage = () => {
+const MainSection = () => {
 
     const { Skills } = useContext(AppContext)
 
@@ -275,18 +270,10 @@ const LandingPage = () => {
 
             </div>
 
-            <SliderSection />
-
-            <ProcessGuide />
-
-            <InsightsAnalyzer />
-
-            <WhyAnalyzer />
-
-            <AnalyzeResume />
+          
 
         </section>
     )
 }
 
-export default LandingPage
+export default MainSection

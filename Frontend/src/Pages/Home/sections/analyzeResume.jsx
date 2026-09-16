@@ -1,5 +1,6 @@
 import { FileCheck, UploadCloud, X } from 'lucide-react'
 import React, { useRef, useState } from 'react'
+import axios from 'axios'
 
 const AnalyzeResume = () => {
 
@@ -7,7 +8,7 @@ const AnalyzeResume = () => {
 
     const [file, setFile] = useState(null)
     const [error, setError] = useState(null)
-
+    const [loading, setLoading] = useState(false)
 
     const handleClick = (e) => {
 
@@ -24,6 +25,34 @@ const AnalyzeResume = () => {
         }
         setFile(selectedFile)
         setError('')
+    }
+
+    const handleAnalyze = async () => {
+
+        if (!file) return
+
+        try {
+
+            setLoading(true)
+            setError('')
+
+            const formData = new FormData()
+
+            formData.append('resume', file)
+
+            const response = await axios.post("http://localhost:3000/postResume", formData)
+            console.log(response);
+
+        }
+        catch (err) {
+            console.log(err);
+            setError('Failed in Catching File')
+        }
+        finally {
+            setLoading(false)
+        }
+
+
     }
 
     return (
@@ -47,7 +76,7 @@ const AnalyzeResume = () => {
 
                 {!file ? (
                     <div className="group w-full lg:w-1/3 min-h-70 p-6 flex flex-col justify-center items-center gap-4 rounded-2xl border-2 border-dashed border-gray-400/60 bg-white/40 backdrop-blur-md hover:bg-white/60 hover:border-gray-500 transition-all duration-300 cursor-pointer"
-                        onClick={() => fileInputRef.current.click()}
+                    // onClick={() => fileInputRef.current?.click()}
                     >
 
                         {/* Upload Icon */}
@@ -94,16 +123,19 @@ const AnalyzeResume = () => {
 
                     </div>
                 ) : (
-                    <div className='group w-full lg:w-1/3 min-h-70 p-6 flex flex-col justify-center items-center gap-4 rounded-2xl border-2 border-dashed border-white bg-green-400/40 backdrop-blur-md hover:bg-white/60hover:border-gray-500  transition-all duration-300 cursor-pointer relative'>
+                    <div className='group w-full lg:w-1/3 min-h-70 p-6 flex flex-col justify-center items-center gap-4 rounded-2xl border-2 border-dashed border-white bg-green-400/40 backdrop-blur-md hover:bg-white/60 hover:border-gray-500  transition-all duration-300 cursor-pointer relative'>
 
-                        <span className=' absolute top-2 right-2 p-1 bg-gray-400/60 text-white rounded-sm'
+                        <button
+                            className=' absolute top-2 right-2 p-1 bg-gray-400/60 text-white rounded-sm'
+                            type='button'
                             onClick={() => {
                                 setFile(null)
                                 setError('')
                             }}
+                            aria-label='remove uploaded file'
                         >
                             <X size='18px' />
-                        </span>
+                        </button>
 
                         <div className='p-5 rounded-full bg-gray-200/70 text-gray-500  group-hover:scale-110  group-hover:bg-gray-300/70 transition-all duration-300'>
 
@@ -142,11 +174,11 @@ const AnalyzeResume = () => {
                 <div className="p-6 bg-gray-400/30 w-full lg:w-2/3 flex flex-col justify-evenly items-center rounded-lg">
 
                     <div className="text-center">
-                        <h1 className=" whitespace-nowrap text-2xl sm:text-3xl lg:text-5xl">
+                        <h1 className=" whitespace-nowrap text-2xl sm:text-3xl lg:text-5xl font-bold">
                             Upload Your Resume
                         </h1>
 
-                        <p className="text-xs py-3 text-gray-500">
+                        <p className="text-sm py-3 text-gray-500 font-semibold">
                             Upload your resume in PDF to analyze and understand your resume.
                         </p>
                     </div>
@@ -180,7 +212,8 @@ const AnalyzeResume = () => {
 
                             <button
                                 type="button"
-                                className="py-3 px-5 w-40 border rounded-sm text-xl bg-blue-300 text-white cursor-pointer hover:bg-blue-400 transition " >
+                                className="py-3 px-5 w-40 border rounded-sm text-xl bg-blue-300 text-white cursor-pointer hover:bg-blue-400 transition "
+                                onClick={handleAnalyze} >
                                 Analyze
                             </button>
 

@@ -1,6 +1,6 @@
 import { LucideTarget } from 'lucide-react'
 import React, { useContext } from 'react'
-import { AppContext } from '../../Contents/contentData'
+import { AppContext } from '../../../Contents/contentData'
 
 const InsightsAnalyzer = () => {
 
@@ -14,15 +14,15 @@ const InsightsAnalyzer = () => {
                 <hr className=' border-gray-300' />
             </div>
 
-            <div className='p-2 rounded-lg bg-gray-100/20 py-5 shadow-xl'>
+            <div className='p-2 rounded-lg py-5 shadow-sm'>
 
                 <div className='analyze_section_info flex flex-col lg:flex-row'>
 
                     <div className=' w-full lg:w-1/3 p-2 '>
 
                         <div className='analyze_info_img'>
-                            <p className=' text-3xl'>Everything you need to</p>
-                            <p className=' text-2xl bg-linear-to-r from-blue-400 via-purple-500 to-pink-400 bg-clip-text text-transparent'>understand your resume</p>
+                            <p className=' text-3xl font-bold'>Everything you need to</p>
+                            <p className=' text-2xl text-gray-400 font-bold'>understand your resume</p>
                         </div>
 
                         <div className='analyze_info_text pe-8 pt-5'>

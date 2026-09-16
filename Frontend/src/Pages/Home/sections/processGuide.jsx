@@ -1,6 +1,6 @@
 import { } from 'lucide-react'
 import React, { useContext } from 'react'
-import { AppContext } from '../../Contents/contentData'
+import { AppContext } from '../../../Contents/contentData'
 
 const ProcessGuide = () => {
 
@@ -14,15 +14,15 @@ const ProcessGuide = () => {
         <hr className=' border-2 border-gray-300 w-20 ' />
       </div>
 
-      <div className='px-2 rounded-lg bg-gray-100/20 py-5 shadow-xl'>
+      <div className='px-2 rounded-lg py-5 shadow-sm'>
 
         <div className='analyze_section_info flex flex-col lg:flex-row'>
 
           <div className=' w-full lg:w-1/3 p-2'>
 
             <div className='analyze_info_img'>
-              <p className=' text-3xl'>From resume to insights</p>
-              <p className=' text-2xl bg-linear-to-r from-blue-400 via-purple-500 to-pink-400 bg-clip-text text-transparent'>in minutes</p>
+              <p className=' text-3xl font-bold'>From resume to insights</p>
+              <p className=' text-2xl font-bold text-gray-400'>in minutes</p>
             </div>
 
             <div className='analyze_info_text  pe-5 pt-5'>
@@ -44,7 +44,7 @@ const ProcessGuide = () => {
                     {rw.id}
                   </span>
 
-                  <span className= {`inline-fit ${rw.textColor} ${rw.bgColor} text-blue-300 p-3 rounded-full`}>
+                  <span className={`inline-fit ${rw.textColor} ${rw.bgColor} text-blue-300 p-3 rounded-full`}>
                     <Icon size='30px' />
                   </span>
 

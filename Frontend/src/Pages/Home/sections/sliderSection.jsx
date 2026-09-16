@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { AppContext } from "../../Contents/contentData";
+import { AppContext } from "../../../Contents/contentData";
 
 const SliderSection = () => {
 

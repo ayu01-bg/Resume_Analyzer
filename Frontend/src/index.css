@@ -10,11 +10,14 @@ body,
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
-    font-family: Poppins_semiBold, Helvetica, sans-serif;
+    font-family: Poppins, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: 'Poppins_semiBold';
-    src: url(./assets/Fonts/Poppins/Poppins-SemiBold.ttf);
+    font-family: 'Poppins';
+    src: url('./assets/Fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
 }
 

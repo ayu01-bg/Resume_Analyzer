@@ -7,7 +7,7 @@ const InsightsAnalyzer = () => {
     const { insightAnalyzeData } = useContext(AppContext)
 
     return (
-        <section className=' w-full p-2 mt-10 l'>
+        <section className=' w-full p-2 mt-10 l' id='insightsAnalyzer'>
 
             <div className='py-4 ps-4'>
                 <strong className=' text-4xl bg-linear-to-r from-blue-500 via-purple-600 to-pink-600 bg-clip-text text-transparent'>WHAT YOU GET</strong>

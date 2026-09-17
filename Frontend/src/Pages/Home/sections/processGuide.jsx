@@ -7,7 +7,7 @@ const ProcessGuide = () => {
   const { analyzeData } = useContext(AppContext)
 
   return (
-    <section className=' w-full p-2 mt-15  '>
+    <section className=' w-full p-2 mt-15 ' id='howitworks'>
 
       <div className=' py-4 ps-4'>
         <strong className=' text-4xl bg-linear-to-r from-blue-500 via-purple-600 to-pink-600 bg-clip-text text-transparent'>SIMPLE PROCESS</strong>

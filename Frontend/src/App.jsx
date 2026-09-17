@@ -1,9 +1,8 @@
-import React from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './Pages/Home/Home'
-import AnalyzeResult from './Pages/Analyze/analyzeResult'
 import { Routes, Route } from 'react-router-dom'
+import AnalyzeResult from './Pages/Analyze/AnalyzeResult'
 
 const App = () => {
   return (
@@ -11,6 +10,7 @@ const App = () => {
       <header>
         <Navbar />
       </header>
+
 
 
       <main className='landing-section min-h-screen px-6 lg:px-10 lg:py-2 text-[#424242] '>

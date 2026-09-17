@@ -1,9 +1,12 @@
 import { FileCheck, UploadCloud, X } from 'lucide-react'
 import React, { useRef, useState } from 'react'
 import axios from 'axios'
+import { Navigate, useNavigate } from 'react-router-dom'
 
 const AnalyzeResume = () => {
 
+    const navigate =  useNavigate()
+    
     const fileInputRef = useRef(null)
 
     const [file, setFile] = useState(null)
@@ -56,7 +59,7 @@ const AnalyzeResume = () => {
     }
 
     return (
-        <section className='p-3 mt-10 rounded-lg bg-gray-300/50 inset-shadow-sm inset-shadow-gray-400/50'>
+        <section className='p-3 mt-10 rounded-lg bg-gray-300/50 inset-shadow-sm inset-shadow-gray-400/50' id='analyzeResume'>
 
             <div className=' flex justify-center items-center'>
                 <strong className=' text-4xl py-5'>Upload Documents</strong>
@@ -123,10 +126,10 @@ const AnalyzeResume = () => {
 
                     </div>
                 ) : (
-                    <div className='group w-full lg:w-1/3 min-h-70 p-6 flex flex-col justify-center items-center gap-4 rounded-2xl border-2 border-dashed border-white bg-green-400/40 backdrop-blur-md hover:bg-white/60 hover:border-gray-500  transition-all duration-300 cursor-pointer relative'>
+                    <div className='group w-full lg:w-1/3 min-h-70 p-6 flex flex-col justify-center items-center gap-4 rounded-2xl border-2 border-dashed border-white bg-green-400/40 backdrop-blur-md  cursor-pointer relative'>
 
                         <button
-                            className=' absolute top-2 right-2 p-1 bg-gray-400/60 text-white rounded-sm'
+                            className=' absolute top-2 right-2 p-1 bg-gray-400/60 text-white rounded-md hover:bg-red-400/60 hover:text-gray-200'
                             type='button'
                             onClick={() => {
                                 setFile(null)

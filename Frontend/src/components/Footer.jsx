@@ -7,19 +7,19 @@ const Footer = () => {
 
             <div className=' grid grid-1 grid-cols-3 p-3'>
 
-                <div className='p-3'>
-                    <div className=' flex gap-1 py-2'>
+                <div className='px-3 pb-8'>
+                    <div className=' flex gap-1 py-2 text-xl'>
                         <span>
                             <FileText />
                         </span>
                         Analyzer
                     </div>
 
-                    <p className=' text-white'>AI-powered resume analysis to help you understand and improve your professional profile.</p>
+                    <p className=' text-white text-xs'>AI-powered resume analysis to help you understand and improve your professional profile.</p>
 
                 </div>
 
-                <div className=' flex  justify-around'>
+                <div className=' flex justify-around'>
 
                     <div className=' flex flex-col'>
                         <h1>Product</h1>

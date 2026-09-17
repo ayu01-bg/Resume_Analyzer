@@ -7,7 +7,7 @@ import { AppContext } from '../Contents/contentData'
 
 const Navbar = () => {
 
-    const {navigationItems} = useContext(AppContext)
+    const { navigationItems } = useContext(AppContext)
 
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -34,24 +34,18 @@ const Navbar = () => {
                 <div className="hidden items-center gap-8 lg:flex">
 
                     {navigationItems.map((navigationItem) => (
-                        <NavLink
+                        <a
                             key={navigationItem.name}
-                            to={navigationItem.to}
-                            className={({ isActive }) =>
-                                `relative px-2 py-2 text-sm font-medium transition-colors duration-200
-                                ${isActive
-                                    ? 'text-blue-500'
-                                    : 'text-gray-600 hover:text-blue-500'
-                                }`
-                            }
+                            href={navigationItem.to}
+                            className="relative px-2 py-2 text-md font-medium transition-colors duration-200 text-gray-600 hover:text-blue-500"
                         >
                             {navigationItem.name}
-                        </NavLink>
+                        </a>
                     ))}
 
                     {/* Analyze Button */}
-                    <NavLink
-                        to="/analyze"
+                    <a
+                        href="/#analyzeResume"
                         className="group inline-flex items-center gap-2 rounded-full bg-blue-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-600 hover:shadow-xl"
                     >
                         Analyze Your Resume
@@ -60,7 +54,7 @@ const Navbar = () => {
                             size={19}
                             className="transition-transform duration-300 group-hover:translate-x-1"
                         />
-                    </NavLink>
+                    </a>
 
                 </div>
 
@@ -98,20 +92,14 @@ const Navbar = () => {
 
                         {/* Navigation Links */}
                         {navigationItems.map((navigationItem) => (
-                            <NavLink
+                            <a
                                 key={navigationItem.name}
-                                to={navigationItem.to}
+                                href={navigationItem.to}
                                 onClick={closeMenu}
-                                className={({ isActive }) =>
-                                    `rounded-lg px-4 py-3 text-sm font-medium transition-colors
-                                    ${isActive
-                                        ? 'bg-blue-50 text-blue-500'
-                                        : 'text-gray-600 hover:bg-gray-50 hover:text-blue-500'
-                                    }`
-                                }
+                                className = "rounded-lg px-4 py-3 text-sm font-medium transition-colors bg-blue-50 text-gray-600 hover:bg-gray-50 hover:text-blue-500"
                             >
                                 {navigationItem.name}
-                            </NavLink>
+                            </a>
                         ))}
 
 
@@ -121,7 +109,7 @@ const Navbar = () => {
 
                         {/* Analyze Button */}
                         <NavLink
-                            to="/analyze"
+                            to="/#analyzeResume"
                             onClick={closeMenu}
                             className="group inline-flex items-center justify-center gap-2 rounded-full bg-blue-500 px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-blue-600"
                         >

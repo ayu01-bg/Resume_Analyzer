@@ -15,7 +15,7 @@ const MainSection = () => {
     const { Skills } = useContext(AppContext)
 
     return (
-        <section className="">
+        <section className="hero-section">
 
 
             <div className="landing-container flex w-full flex-col items-center gap-10 py-4 px-5 mt-2 lg:flex-row lg:gap-12 lg:px-0">
@@ -54,8 +54,8 @@ const MainSection = () => {
                     {/* CTA */}
                     <div className="analyze-resume-button py-2 flex gap-2">
 
-                        <NavLink
-                            to="/analyze"
+                        <a
+                            href="/#analyzeResult"
                             className="group inline-flex items-center gap-3 rounded-lg bg-blue-500 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-blue-500/25 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-600 hover:shadow-xl hover:shadow-blue-500/30"
                         >
                             Analyze Your Resume
@@ -64,15 +64,15 @@ const MainSection = () => {
                                 size={21}
                                 className="transition-transform duration-300 group-hover:translate-x-1"
                             />
-                        </NavLink>
+                        </a>
 
-                        <NavLink
+                        {/* <NavLink
                             to="/analyze"
                             className="group inline-flex items-center gap-3 rounded-lg px-6 py-3 text-base font-semibold text-blue-500 shadow-lg shadow-blue-500/25 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-600 hover:shadow-xl hover:shadow-blue-500/30 hover:text-white"
                         >
                             <Play />
                             How it works
-                        </NavLink>
+                        </NavLink> */}
 
                     </div>
 
@@ -117,7 +117,7 @@ const MainSection = () => {
                         {/* Background Glow */}
                         <div className="absolute -inset-4 -z-10 rounded-4xl" />
 
-                        <div className="overflow-hidden rounded-2xl border border-white/60 bg-mist-100 p-3 shadow-2xl shadow-blue-900/20 sm:p-4">
+                        <div className="overflow-hidden rounded-2xl border border-white/60 bg-mist-100/30 p-3 shadow-2xl shadow-blue-900/20 sm:p-4">
 
                             {/* Top Section */}
                             <div className="mb-3 flex flex-col gap-3 rounded-xl bg-white/5 sm:flex-row">

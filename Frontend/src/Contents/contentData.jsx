@@ -8,15 +8,15 @@ const ContentData = ({ children }) => {
     const navigationItems = [
         {
             name: 'How it works',
-            to: '/howitworks'
+            to: '/#howitworks'
         },
         {
             name: 'Features',
-            to: '/features'
+            to: '/#insightsAnalyzer'
         },
         {
-            name: 'Why Analyzer',
-            to: '/whyAnalyzer'
+            name: 'WhyAnalyzer',
+            to: '/#whyAnalyzer'
         }
     ]
 

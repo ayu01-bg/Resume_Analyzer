@@ -7,7 +7,7 @@ const WhyAnalyzer = () => {
     const { whyAnalyzeData } = useContext(AppContext)
 
     return (
-        <section className='w-full p-2 mt-10  '>
+        <section className='w-full p-2 mt-10  ' id='whyAnalyzer'>
 
             <div className='py-4 ps-4'>
                 <strong className=' text-4xl bg-linear-to-r from-blue-500 via-purple-600 to-pink-600 bg-clip-text text-transparent'>Why Analyzer</strong>

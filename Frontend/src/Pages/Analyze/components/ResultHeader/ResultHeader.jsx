@@ -7,9 +7,9 @@ const ResultHeader = () => {
     return (
         <>
 
-            <section className=' p-2 resultHeader_container shadow-lg rounded-lg mt-5 '>
+            <section className='resultHeader_container p-2 shadow-lg rounded-lg mt-5 '>
 
-                <div className=' resultHeade-wrapper p-2 '>
+                <div className=' resultHeader-wrapper p-2 '>
 
                     <div className=' flex items-center'>
                         <div className='p-2'>

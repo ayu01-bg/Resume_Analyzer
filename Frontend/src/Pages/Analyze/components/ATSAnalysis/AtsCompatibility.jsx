@@ -4,9 +4,9 @@ import ATSMetrics from './ATSMetrics'
 
 const AtsCompatibility = () => {
   return (
-    <section className=' p-2 mt-5 rounded-lg shadow-lg' >
+    <section className='atsCompatibility_container p-2 mt-5 rounded-lg shadow-lg' >
 
-      <div className=' flex justify-between items-center'>
+      <div className='atsCompatibility_wrapper flex justify-between items-center'>
 
         <div className=' flex items-center gap-2'>
 
